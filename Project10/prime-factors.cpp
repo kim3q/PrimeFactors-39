@@ -24,11 +24,13 @@ public:
 					result.push_back(divisor);
 					number /= divisor;
 				}
-				while (number % 3 == 0)
+				divisor++;
+				while (number % divisor == 0)
 				{
-					result.push_back(3);
-					number /= 3;
+					result.push_back(divisor);
+					number /= divisor;
 				}
+				divisor++;
 			}
 			else {
 				result.push_back(number);
