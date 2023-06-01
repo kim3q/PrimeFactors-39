@@ -10,7 +10,7 @@ public:
 		if (number > 1) {
 			if (number == 4)
 			{
-				while(number % 2 ==0)
+				while (number % 2 == 0)
 				{
 					result.push_back(2);
 					number /= 2;
@@ -18,8 +18,16 @@ public:
 			}
 			else if (number == 6)
 			{
-				result.push_back(2);
-				result.push_back(3);
+				while (number % 2 == 0)
+				{
+					result.push_back(2);
+					number /= 2;
+				}
+				while (number % 3 == 0)
+				{
+					result.push_back(3);
+					number /= 3;
+				}
 			}
 			else {
 				result.push_back(number);
