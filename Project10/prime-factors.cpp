@@ -19,18 +19,14 @@ public:
 			}
 			else if (number == 6)
 			{
-				while (number % divisor == 0)
+				for ( divisor = 2; number > 1; divisor++)
 				{
-					result.push_back(divisor);
-					number /= divisor;
+					while (number%divisor == 0)
+					{
+						result.push_back(divisor);
+						number /= divisor;
+					}
 				}
-				divisor++;
-				while (number % divisor == 0)
-				{
-					result.push_back(divisor);
-					number /= divisor;
-				}
-				divisor++;
 			}
 			else {
 				result.push_back(number);
