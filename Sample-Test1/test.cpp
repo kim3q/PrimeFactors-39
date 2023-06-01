@@ -16,7 +16,7 @@ TEST_F(PrimeFixture, TestName) {
 }
 
 TEST_F(PrimeFixture, TestName2) {
-	expected = {2};
+	expected = { 2 };
 	EXPECT_EQ(expected, prime_factor.of(2));
 }
 
@@ -28,4 +28,9 @@ TEST_F(PrimeFixture, TestName3) {
 TEST_F(PrimeFixture, TestName4) {
 	expected = { 2, 2 };
 	EXPECT_EQ(expected, prime_factor.of(4));
+}
+
+TEST_F(PrimeFixture, TestName6) {
+	expected = { 2, 3 };
+	EXPECT_EQ(expected, prime_factor.of(6));
 }
